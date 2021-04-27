@@ -1,19 +1,43 @@
 import Chart from './Chart'
 
-export default function MultipleLineChart({data}) {
+export default function MultipleLineChart({data_}) {
+
+    // function needs to be an array ????
+    const data_convert = []
+
+    // pass the object to the array
+    for (let i = 0; i < data_.length; i++) {
+        data_convert.push(data_[i])
+    }
+
     // get data -> 
     // axios get
     // pass data to chart ->
     let option = {
     
-    title: {
-        text: 'Commodities',
-    },
+    // title: {
+    //     text: 'Commodities',
+    // },
     tooltip: {
-        trigger: 'axis'
+        trigger: 'axis' 
     },
     legend: {
-        data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+        data: [
+            "Date",
+            "Energy",
+            "Non-energy",
+            "Agriculture",
+            "Beverages",
+            "Food",
+            "Oils & Meals",
+            "Grains",
+            "Other Food",
+            "Timber",
+            "Other Raw Mat.",
+            "Fertilizers",
+            "Metals & Minerals",
+            "Precious Metals",
+            ]
     },
     // grid: {
     //     left: '3%',
@@ -21,51 +45,86 @@ export default function MultipleLineChart({data}) {
     //     bottom: '3%',
     //     containLabel: true
     // },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-    },
+    // toolbox: {
+    //     feature: {
+    //         saveAsImage: {}
+    //     }
+    // },
     xAxis: {
         type: 'category',
-        boundaryGap: true,
-        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        boundaryGap: false,
+        data: [1960,
+            1961,
+            1962,
+            1963,
+            1964,
+            1965,
+            1966,
+            1967,
+            1968,
+            1969,
+            1970,
+            1971,
+            1972,
+            1973,
+            1974,
+            1975,
+            1976,
+            1977,
+            1978,
+            1979,
+            1980,
+            1981,
+            1982,
+            1983,
+            1984,
+            1985,
+            1986,
+            1987,
+            1988,
+            1989,
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            "2021M01",
+            "2021M02",
+            "2021M03"
+            
+            ]
     },
     yAxis: {
         type: 'value'
     },
-    series: [
-        {
-            name: '邮件营销',
-            type: 'line',
-            stack: '总量',
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name: '联盟广告',
-            type: 'line',
-            stack: '总量',
-            data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name: '视频广告',
-            type: 'line',
-            stack: '总量',
-            data: [150, 232, 201, 154, 190, 330, 410]
-        },
-        {
-            name: '直接访问',
-            type: 'line',
-            stack: '总量',
-            data: [320, 332, 301, 334, 390, 330, 320]
-        },
-        {
-            name: '搜索引擎',
-            type: 'line',
-            stack: '总量',
-            data: [820, 932, 901, 934, 1290, 1330, 1320]
-        }
-    ]
+
+    series: data_convert
 };
 
     return (

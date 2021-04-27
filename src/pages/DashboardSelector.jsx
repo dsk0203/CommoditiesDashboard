@@ -17,13 +17,16 @@ export default function DashboardSelector({ axios }) {
     }, []) 
 
     return (
-    <section>
+        <div className="main-dashboard-title">
+            <h1>Recent Blogs</h1>
+        <section className="dashboard-selector">
         {dashboardList && dashboardList.map(dashboard => (
-            <Link to={dashboard.path} >
-                <h3>{dashboard.title}</h3>
-                <p>{dashboard.description}</p>
+            <Link className="dashboard-card" to={dashboard.path} >
+                <h3 className="dash-title">{dashboard.title}</h3>
+                <p className="dash-description"> {dashboard.description}</p>
             </Link>
         ))}
-    </section>)
+    </section>
+    </div>)
 
 }

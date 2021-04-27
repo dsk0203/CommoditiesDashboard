@@ -9,21 +9,28 @@ import './scss/base.scss'
 import Home from './pages/Home'
 import DashboardSelector from './pages/DashboardSelector'
 import Footer from './components/ResponsiveFooter'
+import NotFound from './pages/DefaultPath'
+import BlogHome from './pages/BlogHome'
 
 
 function App() {
 
   const navLinks = [
     {
-    text: 'Inflation',
+    text: 'Commodities',
     path: '/',
     icon: 'ion-md-information-circle'
     },
     {
-      text: 'Math',
-      path: '/analytics',
+      text: 'Blogs',
+      path: '/blog',
       icon: 'ion-ios-checkbox-outline'
-    }
+    },
+    {
+      text: 'Blog Home',
+      path: '/ds',
+      icon: 'ion-md-star-half'
+    } 
   ]
 
   return (
@@ -36,8 +43,12 @@ function App() {
           linkColor= "#777"
           />
         <Router>
+          
           <Home path="/" />
-          <DashboardSelector path="/analytics" axios={axios}  />
+          <DashboardSelector path="/blog" axios={axios}  />
+          <BlogHome path="/ds" />
+
+          <NotFound default />
         </Router>
       <Footer name={'Dylan Kaplan'} email={'dsk0203@gmail.com'}/>
     </div>

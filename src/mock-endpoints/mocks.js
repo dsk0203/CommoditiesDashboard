@@ -6,21 +6,29 @@ const MockAdapter = require('axios-mock-adapter');
 const mock = new MockAdapter(axios);
 
 // data endpoints
-mock.onGet('/api/data/repo_hierarchy').reply(200, require('./fixtures/repo_hierarchy.json'))
-mock.onGet('/api/data/amount_of_repos').reply(200, require('./fixtures/open_source_vs_ep_repos.json'))
-mock.onGet('/api/data/device_percentage').reply(200, require('./fixtures/device_percentage.json'))
-mock.onGet('/api/data/fake_data').reply(200, require('./fixtures/fake_data.json'))
-mock.onGet('/tst').reply(200)
-
-
-// congiguration endpoints
-mock.onGet('/api/dashboard/repo_dash_config').reply(200, require('./fixtures/repo_dash_config.json'))
+mock.onGet('/api/data/economy_data').reply(200, require('./fixtures/economy_data.json'))
 
 // dashboard list endpoint
 mock.onGet('/api/dashboard-list').reply(200, [
     {
-       path: "repo_dash_config",
+       path: "some_blog_post",
        title: "Org Repository Insights",
        description: "we are off to see the wizard, the wonderful wizard of oz"
-    }
+    },
+    {
+       path: "temp",
+       title: "how we lost our minds",
+       description: "omg"
+    },
+    {
+      path: "temp",
+      title: "how we lost our minds",
+      description: "omg"
+   },
+   {
+      path: "temp",
+      title: "how we lost our minds",
+      description: "omg"
+   },
+
  ])

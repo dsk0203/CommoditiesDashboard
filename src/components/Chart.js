@@ -13,7 +13,7 @@ function Chart({ options }) {
 
 
     return(
-        <div ref={myChart} style={{width: '100%', height: '250%'}}></div>
+        <div ref={myChart} style={{width: '100%', height: '500%'}}></div>
     )
 }
 
