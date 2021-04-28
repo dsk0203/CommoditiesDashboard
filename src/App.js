@@ -12,7 +12,6 @@ import Footer from './components/ResponsiveFooter'
 import NotFound from './pages/DefaultPath'
 import BlogHome from './pages/BlogHome'
 
-
 function App() {
 
   const navLinks = [
@@ -46,7 +45,7 @@ function App() {
           
           <Home path="/" />
           <DashboardSelector path="/blog" axios={axios}  />
-          <BlogHome path="/ds" background={"green"} />
+          <BlogHome path="/ds" background={"'url(./images/techBackground.jpg'"} />
 
           <NotFound default />
         </Router>
