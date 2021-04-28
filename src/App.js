@@ -46,7 +46,7 @@ function App() {
           
           <Home path="/" />
           <DashboardSelector path="/blog" axios={axios}  />
-          <BlogHome path="/ds" />
+          <BlogHome path="/ds" background={"green"} />
 
           <NotFound default />
         </Router>

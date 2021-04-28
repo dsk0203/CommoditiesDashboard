@@ -9,6 +9,8 @@ export default function DashboardSelector({ axios }) {
 
     useEffect(() => {
 
+        document.body.style.backgroundColor = "white"
+
         axios.get('/api/dashboard-list')
             .then(({data}) => {
                 setDashboardList(data)
