@@ -1,0 +1,55 @@
+.blogPostMainDivOutside {
+
+    width: 80%;
+    border: 20px solid rgb(255, 255, 255);
+    font-family: Source sans Pro, sans-serif;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    //background: url(https://cdn.pixabay.com/photo/2015/08/17/01/47/background-891917_960_720.jpg);
+    background: rgba($color: #c5c5c5, $alpha: .8);
+
+    .blog {
+        margin-bottom: 20px
+    }
+
+    .date {
+        
+        opacity: 1;
+        color: #fff;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+    }
+
+    .blog-paragraph {
+        border-left: 5px solid #2370a5;
+        padding-left: 5px;
+
+
+    }
+
+    .blog-title {
+        font-size: 2.0rem;
+        color: #fff;
+
+    }
+
+
+    .line-border {
+        border: 0;
+        height: 0;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid rgb(153, 60, 60);
+    }
+
+    .pre {
+        white-space: pre;
+    }
+
+    .code-1 {
+        all: initial;
+    }
+
+}

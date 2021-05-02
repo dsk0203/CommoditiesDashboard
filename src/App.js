@@ -11,6 +11,7 @@ import DashboardSelector from './pages/DashboardSelector'
 import Footer from './components/ResponsiveFooter'
 import NotFound from './pages/DefaultPath'
 import BlogHome from './pages/BlogHome'
+import BlogPost from './pages/BlogPost'
 
 function App() {
 
@@ -29,7 +30,13 @@ function App() {
       text: 'Blog Home',
       path: '/ds',
       icon: 'ion-md-star-half'
-    } 
+    },
+    {
+      text: 'blog-link',
+      path: '/specific_blog',
+      icon: 'ion-ios-checkbox-outline'
+    }
+  
   ]
 
   return (
@@ -46,7 +53,7 @@ function App() {
           <Home path="/" />
           <DashboardSelector path="/blog" axios={axios}  />
           <BlogHome path="/ds" background={"'url(./images/techBackground.jpg'"} />
-
+          <BlogPost path ='/specific_blog' />
           <NotFound default />
         </Router>
       <Footer name={'Dylan Kaplan'} email={'dsk0203@gmail.com'}/>
